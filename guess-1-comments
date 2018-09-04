@@ -6,18 +6,29 @@ var Turns=0;
 var Correct=false;
 // Add one to value of variable turns
 Turns++;
+// keep looping until Correct is set to True
 while (Correct==false) {
+// Activate Guess, set value to players input, telling player what to input
     var Guess = prompt("Guess my integer (between 0 and 100)!");
+    // checks Guess is the same as Answer
     if (Guess == Answer) {
+        // if equal, say "Correct" and number of turns
         alert("CORRECT! You guessed it in "+Turns+" turns.");
+        // Changes Correct to true to get out of the "while Loop"
         Correct = true;
     }
+    // checks if Guess is bigger than Answer
     else if (Guess > Answer) {
+    // gives response: go lower
         alert("Hint: Try a lower number!");
     }
+    // checks if Guess is smaller than Answer
     else if (Guess < Answer) {
+    // gives response: go higher
         alert("Hint: Try a higher number!");
     }
+    // Add one to turns
     Turns++;
 }
+// Tells the player that the game is over
 alert("Thank you for playing.");
